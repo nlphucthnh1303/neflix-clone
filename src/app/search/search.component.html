@@ -1,16 +1,19 @@
-@if (movies) {
-  <div class="d-flex flex-wrap">
-    @for (movie of movies; track movie.id) {
-      <div class="mx-2 my-3">
-        <app-movie-card [movie]="movie"></app-movie-card>
-      </div>
-    }
-  </div>
-  @if (movies.length === 0) {
-    <div class="w-100 d-flex justify-content-center mt-5">
-      <h1>
-        No results :(
-      </h1>
+<div class="search-results-container">
+  @if (movies && movies.length > 0) {
+    <div class="search-grid">
+      @for (movie of movies; track movie.id) {
+        <div class="search-item">
+          <app-movie-card [movie]="movie"></app-movie-card>
+        </div>
+      }
+    </div>
+  } @else if (movies && movies.length === 0) {
+    <div class="no-results">
+        <div class="no-results-content">
+            <fa-icon icon="search" size="3x"></fa-icon>
+            <h1>No results found</h1>
+            <p>Try different keywords or browse genres.</p>
+        </div>
     </div>
   }
-}
+</div>

@@ -3,6 +3,7 @@ export interface Movie {
   backdrop_path: string | null;
   id: number;
   title: string;
+  name?: string;
   original_title: string;
   overview: string;
   poster_path: string | null;

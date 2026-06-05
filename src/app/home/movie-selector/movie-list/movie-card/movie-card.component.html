@@ -1,5 +1,9 @@
 @if (movie) {
-    <div (click)="tmdbService.openMoreInfos(movie.id)" class="me-2 movie" [style.background-image]="'url(' + this.tmdbService.getImageURL(movie.poster_path, 'w200') +')'">
-        <div class="placeholder-poster"></div>
+    <div class="movie-card" 
+         (click)="tmdbService.openMoreInfos(movie.id)" 
+         [style.background-image]="'url(' + this.tmdbService.getImageURL(movie.poster_path, 'w500') +')'">
+        <div class="movie-info">
+            <h3 class="movie-title">{{movie.title || movie.name}}</h3>
+        </div>
     </div>
 }

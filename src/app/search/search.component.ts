@@ -3,13 +3,15 @@ import {ActivatedRoute} from "@angular/router";
 import {TmdbService} from "../service/tmdb.service";
 import {Movie} from "../service/model/movie.model";
 import {debounce, filter, interval, map} from "rxjs";
-import {MovieCardComponent} from "../home/movie-selector/movie-list/movie-card/movie-card.component";
+import { MovieCardComponent } from "../home/movie-selector/movie-list/movie-card/movie-card.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
 @Component({
   selector: 'app-search',
   standalone: true,
   imports: [
-    MovieCardComponent
+    MovieCardComponent,
+    FontAwesomeModule
   ],
   templateUrl: './search.component.html',
   styleUrl: './search.component.scss'
