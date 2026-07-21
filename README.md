@@ -103,5 +103,3 @@ TMDB_API_KEY=your_tmdb_api_key
 Kiểm tra `LICENSE` trong repo hoặc thêm giấy phép phù hợp (ví dụ MIT).
 
 ---
-
-Muốn tôi chuyển file này thành `README.md`, thêm logo, hoặc dịch sang tiếng Anh không?
